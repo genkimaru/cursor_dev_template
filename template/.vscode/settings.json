@@ -1,0 +1,46 @@
+{
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 22,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "files.autoSave": "onWindowChange",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontSize": 13,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "cursorAI.provider": "custom",
+  "cursorAI.customProviders": [
+    {
+      "name": "Claude",
+      "apiBaseUrl": "https://api.anthropic.com/v1",
+      "apiKeyEnvVar": "CLAUDE_API_KEY",
+      "model": "claude-3-opus-20240229"
+    },
+    {
+      "name": "Gemini",
+      "apiBaseUrl": "https://generativelanguage.googleapis.com/v1beta/models",
+      "apiKeyEnvVar": "GEMINI_API_KEY",
+      "model": "gemini-1.5-pro"
+    },
+    {
+      "name": "OpenAI",
+      "apiBaseUrl": "https://api.openai.com/v1",
+      "apiKeyEnvVar": "OPENAI_API_KEY",
+      "model": "gpt-4o"
+    }
+  ],
+  "cursorAI.defaultProvider": "Claude"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@singapore2022/create-cursor-dev",
+  "version": "0.1.1",
+  "description": "My custom Cursor/VS Code development template",
+  "bin": {
+    "create-cursor-dev": "index.js"
+  },
+  "files": [
+    "template",
+    "index.js"
+  ],
+  "keywords": [
+    "npm-init",
+    "template",
+    "cursor",
+    "vscode",
+    "react",
+    "typescript",
+    "ai"
+  ],
+  "author": "你的名字",
+  "license": "MIT"
+}

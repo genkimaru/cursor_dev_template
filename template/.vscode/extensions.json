@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "dsznajder.es7-react-js-snippets",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "styled-components.vscode-styled-components",
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+    "vscjava.vscode-java-pack",
+    "formulahendry.code-runner",
+    "humao.rest-client",
+    "eamodio.gitlens",
+    "coenraads.bracket-pair-colorizer-2",
+    "usernamehw.errorlens",
+    "pkief.material-icon-theme",
+    "akamud.vscode-theme-onedark",
+    "zhuangtongfa.material-theme"
+  ]
+}
