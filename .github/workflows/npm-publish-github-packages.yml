@@ -29,7 +29,12 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
+          scope: '@singapore2022'
       - run: npm ci
+      - name: Verify authentication
+        run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
