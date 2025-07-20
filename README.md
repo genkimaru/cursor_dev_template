@@ -19,6 +19,40 @@ A custom development template for Cursor/VS Code that provides a pre-configured 
 - **Version Control**: GitLens
 - **Themes**: Material Icon Theme, One Dark Pro, Material Theme
 
+---
+
+### 🧠 Agent Workflow (AI Development Automation)
+
+A complete, interactive agent workflow for automating the software development lifecycle using the [Pocket Flow Framework](https://pypi.org/project/pocketflow/). This workflow guides you from problem definition to implementation, testing, and documentation—all powered by modular AI agents.
+
+**Key Features:**
+- 6-node agent network: Problem Acquisition, Clarification, Planning, Implementation, Testing, Documentation
+- Interactive, step-by-step automation of real-world software projects
+- Generates requirements, plans, code, tests, and documentation
+- Integrates with Git for version control
+- Easily extensible and customizable
+
+**Location:** `template/src/agent_workflow.py`
+
+#### Installation (Python)
+
+1. Ensure you have Python 3.8+ installed.
+2. Install the [pocketflow](https://pypi.org/project/pocketflow/) framework:
+   ```bash
+   pip install pocketflow
+   ```
+
+#### Usage
+
+```bash
+cd template/src
+python agent_workflow.py
+```
+
+You will be guided through a series of prompts to define your project, clarify requirements, plan, implement, test, and generate documentation. Artifacts (requirements, plans, code, test reports, docs) are saved in the current directory.
+
+---
+
 ### AI Assistant Configuration
 - **Multi-provider support**: Claude, Gemini, and OpenAI
 - **Custom API configurations** for each provider
@@ -167,6 +201,7 @@ cursor_dev_template/
 │   ├── .cursor/         # Cursor-specific configuration
 │   │   └── .cursorrules
 │   └── src/             # Source code directory
+│       └── agent_workflow.py  # AI agent workflow (Pocket Flow)
 └── README.md            # This file
 ```
 
