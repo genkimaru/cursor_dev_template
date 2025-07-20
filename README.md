@@ -194,12 +194,13 @@ npm publish --access public
 cursor_dev_template/
 ├── index.js              # Main template generator script
 ├── package.json          # Package configuration
+|——— .cursorrules         # ruels that cursor editor should follow
 ├── template/             # Template files
 │   ├── .vscode/         # VS Code/Cursor settings
 │   │   ├── extensions.json
 │   │   └── settings.json
 │   ├── .cursor/         # Cursor-specific configuration
-│   │   └── .cursorrules
+│   │   └── mcp.json     # mcp declaration
 │   └── src/             # Source code directory
 │       └── agent_workflow.py  # AI agent workflow (Pocket Flow)
 └── README.md            # This file
