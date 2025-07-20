@@ -1,0 +1,112 @@
+global_instruction: |
+  This is a full-stack project using Next.js (App Router), TypeScript, TailwindCSS, and modern best practices.
+  Follow strict separation of concerns between UI, API handlers, business logic, and data access.
+  Use functional components, hooks, Server Components where appropriate.
+  Use Prisma for DB access, Zod for validation, and NextAuth.js for authentication.
+  All code should be scalable, modular, and readable. Maintain file-based routing conventions of Next.js.
+  Avoid redundant logic across client and server code.
+
+rules:
+
+- pattern: "app/**/page.tsx"
+    instruction: |
+      Use Server Components unless client interactivity is needed.
+      Keep page components lean; delegate logic to components or hooks.
+      Use Suspense and async/await for server data fetching.
+
+- pattern: "app/**/layout.tsx"
+    instruction: |
+      Use consistent layout structure. Include metadata and `<html lang="en">` tag.
+      Provide <main> container for accessibility.
+      Keep layout shared across nested routes.
+
+- pattern: "app/api/**/*.ts"
+    instruction: |
+      Follow Next.js API route conventions.
+      Use `POST`, `GET`, etc. functions directly.
+      Validate request body with Zod.
+      Handle authentication via NextAuth session or middleware.
+      Return standardized JSON response using NextResponse.json.
+
+- pattern: "components/**/*.tsx"
+    instruction: |
+      Use functional components with React hooks.
+      Make components small, reusable, and type-safe.
+      Accept props via typed interfaces.
+      Use Tailwind for styling.
+      Mark with `"use client"` only when needed.
+
+- pattern: "hooks/**/*.ts"
+    instruction: |
+      Write reusable logic for data fetching or interactivity.
+      Prefix with `use` and follow React hook rules.
+      Fetch data with SWR or React Query if needed.
+      Abstract complex client behavior from components.
+
+- pattern: "lib/**/*.ts"
+    instruction: |
+      Put shared utilities, validation schemas, and helpers here.
+      Use pure functions and keep side-effects minimal.
+      Use Zod for schema definitions and parsing.
+
+- pattern: "prisma/**/*.ts"
+    instruction: |
+      Use Prisma client for DB access.
+      Keep DB logic out of routes and components.
+      Avoid leaking DB layer into UI.
+
+- pattern: "middleware.ts"
+    instruction: |
+      Use Next.js middleware for global logic like auth or logging.
+      Avoid heavy computation or DB access in middleware.
+
+- pattern: "**/*.ts"
+    instruction: |
+      Use TypeScript strictly. Avoid 'any'.
+      Always use type/interface for function inputs/outputs.
+      Use async/await and handle errors gracefully.
+      Organize code by domain, not by type.
+      Prefer named exports.
+
+- pattern: "**/*.tsx"
+    instruction: |
+      Prefer Server Components unless interactive UI is required.
+      Use Tailwind CSS for styling.
+      Avoid inline styles or classnames string building.
+      Use aria attributes where needed for accessibility.
+
+- pattern: "**/*.test.ts"
+    instruction: |
+      Use Vitest or Jest.
+      Test API routes, logic functions, and UI behavior.
+      Use mock for Prisma/NextAuth.
+      Follow Arrange-Act-Assert pattern.
+
+- pattern: "**/*.json"
+    instruction: |
+      Do not include comments. Keep it clean and strictly formatted.
+
+- pattern: "**/*.md"
+    instruction: |
+      Write markdown docs with clear code blocks and headings.
+      Include usage examples for components and APIs.
+
+- pattern: "next.config.js"
+    instruction: |
+      Do not modify unless specifically instructed.
+      Keep custom webpack or image domains minimal and documented.
+
+- pattern: "tailwind.config.ts"
+    instruction: |
+      Do not generate utility classes manually.
+      Extend theme responsibly. Keep config lean and focused.
+
+- pattern: ".env*"
+    instruction: |
+      Never edit or expose env files in generation.
+      Handle secrets and tokens securely.
+
+- pattern: "README.md"
+    instruction: |
+      Include project overview, folder structure, how to run locally, and important env variables.
+      Add commands for common scripts (e.g., `pnpm dev`, `prisma migrate`, etc).
